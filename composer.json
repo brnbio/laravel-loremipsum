@@ -1,0 +1,40 @@
+{
+    "name": "brnbio/laravel-loremipsum",
+    "description": "Lorem ipsum generator for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Heider",
+            "email": "frank@brnb.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2",
+        "fzaninotto/faker": "^1.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Brnbio\\LaravelLoremIpsum\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brnbio\\LaravelLoremIpsum\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brnbio\\LaravelLoremIpsum\\LoremIpsumServiceProvider"
+            ]
+        }
+    }
+}
